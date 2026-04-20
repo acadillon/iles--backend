@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_content_links",
+  "info": {
+    "displayName": "Link",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "Url": {
+      "type": "string"
+    },
+    "LinkTitle": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "members",
+  "info": {
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Members"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "LastName": {
+      "type": "string"
+    },
+    "FirstName": {
+      "type": "string"
+    },
+    "Bio": {
+      "type": "text"
+    },
+    "practices": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::practice.practice",
+      "inversedBy": "members"
+    },
+    "Instagram": {
+      "type": "string"
+    },
+    "Website": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

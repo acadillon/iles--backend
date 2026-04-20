@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_content_paragraphs",
+  "info": {
+    "displayName": "Paragraph",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "Subtitle": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

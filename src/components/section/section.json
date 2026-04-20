@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_section_sections",
+  "info": {
+    "displayName": "Section",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Chapo": {
+      "type": "blocks"
+    },
+    "Paragraphs": {
+      "type": "component",
+      "component": "content.paragraph",
+      "repeatable": true
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

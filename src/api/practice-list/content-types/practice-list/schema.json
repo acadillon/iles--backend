@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "practice_lists",
+  "info": {
+    "singularName": "practice-list",
+    "pluralName": "practice-lists",
+    "displayName": "PracticeList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "practices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::practice.practice"
+    }
+  }
+}

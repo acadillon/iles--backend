@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news",
+  "info": {
+    "singularName": "new",
+    "pluralName": "news",
+    "displayName": "News"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "StartDate": {
+      "type": "date"
+    },
+    "EndDate": {
+      "type": "date"
+    },
+    "Country": {
+      "type": "string"
+    },
+    "City": {
+      "type": "string"
+    },
+    "Place": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "blocks"
+    },
+    "Paragraphs": {
+      "type": "component",
+      "component": "content.paragraph",
+      "repeatable": true
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "event_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event-category.event-category",
+      "mappedBy": "news"
+    },
+    "ExternalEvent": {
+      "type": "boolean"
+    },
+    "Links": {
+      "type": "component",
+      "component": "content.link",
+      "repeatable": true
+    },
+    "RendezVous": {
+      "type": "component",
+      "component": "content.rendez-vous",
+      "repeatable": true
+    }
+  }
+}

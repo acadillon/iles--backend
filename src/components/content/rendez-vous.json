@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_content_rendez_vous",
+  "info": {
+    "displayName": "RendezVous",
+    "icon": "pin"
+  },
+  "options": {},
+  "attributes": {
+    "EventDate": {
+      "type": "date"
+    },
+    "StartHour": {
+      "type": "time"
+    },
+    "EndHour": {
+      "type": "time"
+    },
+    "Place": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Text": {
+      "type": "blocks"
+    },
+    "Links": {
+      "type": "component",
+      "component": "content.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
