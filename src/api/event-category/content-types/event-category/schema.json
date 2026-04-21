@@ -27,7 +27,12 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::new.new",
-      "inversedBy": "event_categories"
+      "inversedBy": "event_categories",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

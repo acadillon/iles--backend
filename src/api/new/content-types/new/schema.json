@@ -108,7 +108,12 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::event-category.event-category",
-      "mappedBy": "news"
+      "mappedBy": "news",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "ExternalEvent": {
       "type": "boolean",

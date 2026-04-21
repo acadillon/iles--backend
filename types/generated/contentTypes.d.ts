@@ -495,7 +495,12 @@ export interface ApiEventCategoryEventCategory
           localized: true;
         };
       }>;
-    news: Schema.Attribute.Relation<'manyToMany', 'api::new.new'>;
+    news: Schema.Attribute.Relation<'manyToMany', 'api::new.new'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -549,7 +554,13 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    Instagram: Schema.Attribute.String &
+    InstagramName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    InstagramUrl: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -626,7 +637,12 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
     event_categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::event-category.event-category'
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     ExternalEvent: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -703,16 +719,20 @@ export interface ApiPracticeListPracticeList extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::practice-list.practice-list'
-    > &
-      Schema.Attribute.Private;
+    >;
     practices: Schema.Attribute.Relation<'oneToMany', 'api::practice.practice'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;

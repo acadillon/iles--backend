@@ -45,7 +45,15 @@
       "target": "api::practice.practice",
       "inversedBy": "members"
     },
-    "Instagram": {
+    "InstagramName": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "InstagramUrl": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
