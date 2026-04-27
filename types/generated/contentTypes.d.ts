@@ -634,6 +634,12 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    EndHour: Schema.Attribute.Time &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     event_categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::event-category.event-category'
@@ -686,6 +692,12 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
         };
       }>;
     StartDate: Schema.Attribute.Date &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    StartHour: Schema.Attribute.Time &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

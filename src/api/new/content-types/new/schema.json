@@ -108,12 +108,12 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::event-category.event-category",
-      "mappedBy": "news",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "mappedBy": "news"
     },
     "ExternalEvent": {
       "type": "boolean",
@@ -142,6 +142,22 @@
       },
       "component": "content.rendez-vous",
       "repeatable": true
+    },
+    "StartHour": {
+      "type": "time",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "EndHour": {
+      "type": "time",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
