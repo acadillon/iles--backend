@@ -554,6 +554,12 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    Instagram: Schema.Attribute.Component<'content.link', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     InstagramName: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

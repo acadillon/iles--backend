@@ -7,8 +7,8 @@ export interface ContentLink extends Struct.ComponentSchema {
     icon: 'attachment';
   };
   attributes: {
-    LinkTitle: Schema.Attribute.String;
-    Url: Schema.Attribute.String;
+    InstagramName: Schema.Attribute.String;
+    InstagramUrl: Schema.Attribute.String;
   };
 }
 

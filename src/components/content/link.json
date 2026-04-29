@@ -6,10 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "Url": {
+    "InstagramUrl": {
       "type": "string"
     },
-    "LinkTitle": {
+    "InstagramName": {
       "type": "string"
     }
   },

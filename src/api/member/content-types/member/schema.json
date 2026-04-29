@@ -91,6 +91,16 @@
         "videos",
         "audios"
       ]
+    },
+    "Instagram": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "content.link",
+      "repeatable": true
     }
   }
 }
