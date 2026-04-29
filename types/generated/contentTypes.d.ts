@@ -727,38 +727,6 @@ export interface ApiNewNew extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiPracticeListPracticeList extends Struct.SingleTypeSchema {
-  collectionName: 'practice_lists';
-  info: {
-    displayName: 'PracticeList';
-    pluralName: 'practice-lists';
-    singularName: 'practice-list';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::practice-list.practice-list'
-    >;
-    practices: Schema.Attribute.Relation<'oneToMany', 'api::practice.practice'>;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiPracticePractice extends Struct.CollectionTypeSchema {
   collectionName: 'practices';
   info: {
@@ -1312,7 +1280,6 @@ declare module '@strapi/strapi' {
       'api::event-category.event-category': ApiEventCategoryEventCategory;
       'api::member.member': ApiMemberMember;
       'api::new.new': ApiNewNew;
-      'api::practice-list.practice-list': ApiPracticeListPracticeList;
       'api::practice.practice': ApiPracticePractice;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
